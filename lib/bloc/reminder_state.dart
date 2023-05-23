@@ -20,8 +20,3 @@ class ReminderInitial extends ReminderState {
   }
 
 }
-
-// class SelectTimeState extends ReminderState {
-//   final TimeOfDay? eventTime;
-//    const SelectTimeState({required this.eventTime});
-// }

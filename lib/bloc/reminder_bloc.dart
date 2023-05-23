@@ -15,20 +15,13 @@ class ReminderBloc extends Bloc<ReminderEvent, ReminderState> {
 
     on<SaveEvent>((event, emit) {
 
+      print(event.reminderModel.eventName);
       state.reminderModelListObj[event.reminderModel.eventIndex] = event.reminderModel;
 
       var reminderState = ReminderState(reminderModelListObj: state.reminderModelListObj);
       emit(reminderState);    
       
       });
-
-    // on<SelectTimeEvent>((event, emit) {
-
-    //   print(event.eventTime);
-    //   //emit(SelectTimeState(eventTime: event.eventTime));    
-    //   emit(SelectTimeState(eventTime: event.eventTime));
-      
-    //   });
 
   }
 
